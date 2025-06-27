@@ -1,0 +1,13 @@
+<h1>Hello Baby {{user}}</h1>
+<p>{{count}}</p>
+<button (click)="Increment()">increment</button>
+<button (click)="Decrement()">decrement</button>
+
+<input type="text" [value]="name" placeholder="Enter user's name" (input)="updateValue($event)" >
+<button (click)="updateName(name)">Change Name</button>
+
+<h3>Email is : {{email}}</h3>
+
+<input type="text" [value]="email" placeholder="Enter user's email"  #emailField >
+<button (click)="setEmail(emailField.value)">Set Name</button>
+<button (click)="getEmail(emailField)">Get Name</button>
