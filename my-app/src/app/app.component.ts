@@ -8,7 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
   selector: 'app-root',
   imports: [RouterOutlet
     ,LoginComponent
-    ,SignupComponent
+    // ,SignupComponent
     // ,ProfileComponent
   ],
   templateUrl: './app.component.html',
