@@ -1,0 +1,11 @@
+.links{
+    display: flex;
+    gap: 20px;
+    padding: 10px 2vw;
+    font-size: larger;
+}
+
+.links a{
+    color: crimson;
+    text-decoration: none;
+}

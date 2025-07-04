@@ -30,14 +30,97 @@
     } -->
 
 
-<h1>Signals in Angular</h1>
+<!-- <h1>Signals in Angular</h1> -->
+<!-- <h1>Effect in Angular</h1> -->
 
-<p>{{x}}</p>
-<p>{{count()}}</p>
-<p>{{data()}}</p>
-<p>{{notData}}</p>
+<!-- <p>{{x}}</p> -->
+<!-- <p>{{count()}}</p> -->
+<!-- <p>{{data()}}</p>
+<p>{{notData}}</p> -->
 
-<button (click)="updateX()">Set Value</button>
-<button (click)="updateSignal()">Increase signal</button>
-<button (click)="updateComputed(20)">Increase Compouted Signal</button>
-<button (click)="updateProperty(30)">Increase Value</button>
+<!-- <button (click)="updateX()">Set Value</button> -->
+<!-- <button (click)="count.set(count()+1)">Increase count</button>
+<button (click)="count.set(count()-1)">Decrease count</button> -->
+<!-- <button (click)="updateComputed(20)">Increase Compouted Signal</button> -->
+<!-- <button (click)="updateProperty(30)">Increase Value</button> -->
+
+<!-- @if(displayHead){
+    <div style="background-color: aquamarine; width: 200px; height: 200px;"></div>
+    } -->
+
+
+<!-- <h1>For Loop Contextual Variables in Angular</h1>
+
+@for(user of users; track user; let i = $index){ -->
+    <!-- @if($last || $first){
+        <h3 style="color: rebeccapurple;">this is our {{i+1}} {{user}}</h3>
+    }
+    @else{
+    <h3>this is our {{i+1}} {{user}}</h3>
+    } -->
+    <!-- @if($odd){
+        <h3 style="color: aqua;">this is our {{i+1}} {{user}}</h3>
+    }
+    @else{
+    <h3>this is our {{i+1}} {{user}}</h3>
+    }
+    @if($last){
+    <h1>{{$count}}</h1>
+    }
+}
+@empty(){
+    <h3>There are no users</h3>
+} -->
+
+<!-- <h1>Two Way binding</h1> -->
+
+<!-- <input [(ngModel)]="name" type="text" placeholder="enter your name">
+
+<h2>{{name}}</h2> -->
+
+<!-- <h1 [style.backgroundColor]="toggle ? bgColorGold : bgColorOrange"
+[style.fontSize.pt]="40"
+>Two Way binding</h1>
+
+<button (click)="changeBgColor()">Toggle BgColor</button> -->
+
+<!-- <h1 *ngIf="show; else elseBlock">Heading Tag</h1>
+<ng-template #elseBlock> <h1>Headout Tag</h1></ng-template>
+
+<ul>
+    <li *ngFor="let x of students">
+        {{x}}
+    </li>
+</ul> -->
+<!-- 
+<div *ngIf="block==0">
+    <h1>heading 0</h1>
+</div>
+
+<div *ngIf="block==1">
+    <h1>heading 1</h1>
+</div>
+
+<div *ngIf="block==2">
+    <h1>heading 2</h1>
+</div>
+
+<div *ngIf="block==3">
+    <h1>heading 3</h1>
+</div>
+
+
+<button (click)="incrementButton()">Change BLock</button> -->
+
+<div [ngSwitch]="color">
+<h1 *ngSwitchCase="'red'" style="background-color: red;">Red</h1>
+<h1 *ngSwitchCase="'greenyellow'" style="background-color: greenyellow;">greenyellow</h1>
+<h1 *ngSwitchCase="'pink'" style="background-color: pink;">pink</h1>
+<h1 *ngSwitchCase="'blue'" style="background-color: blue;">blue</h1>
+<h1 *ngSwitchDefault style="background-color: black;">No Match</h1>
+</div>
+
+<button (click)="updateColor('red')">Red</button>
+<button (click)="updateColor('greenyellow')">Greenyellow</button>
+<button (click)="updateColor('pink')">Pink</button>
+<button (click)="updateColor('blue')">Blue</button>

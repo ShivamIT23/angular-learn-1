@@ -1,0 +1,10 @@
+<p>home works!</p>
+
+<!-- <a [routerLink]="['profile',{name:'shivam gupta'}]">Go To Profile</a> -->
+
+<!-- <button (click)="goToProfile()">Go to Profile</button> -->
+<div class="links">
+@for(user of users;track user.id){
+    <a routerLink="user/{{user.id}}">{{user.name}}</a>
+}
+</div>

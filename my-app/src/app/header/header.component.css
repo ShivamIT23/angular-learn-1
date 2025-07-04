@@ -1,0 +1,28 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 3vw;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    background-color: aliceblue;
+    color: black;
+    height:60px
+}
+
+.link{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    list-style: none;
+}
+.link li a{
+    text-decoration: none;
+    color: brown;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.active{
+    color:blue !important;
+}
