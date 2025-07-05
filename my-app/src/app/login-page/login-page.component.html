@@ -1,1 +1,27 @@
-<p>login-page works!</p>
+<h1>Reactive Form</h1>
+
+<!-- <form action="" method="get">
+    <input type="text" placeholder="Enter Name" [formControl]="name">
+    <br>
+    <br>
+    <input type="text" placeholder="Enter password" [formControl]="password">
+    <button type="button" (click)="displayValue()">Login</button>
+</form>
+<h3>{{name.value}}</h3>
+<h3>{{password.value}}</h3> -->
+
+<form [formGroup]="formData" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Enter Name" formControlName="name">
+    <!-- <span *ngIf="name?.hasError('required')"> Name is required</span> -->
+    <span *ngIf="name?.invalid && (name?.dirty || name?.touched)"> Name is Required</span>
+    <br>
+    <br>
+    <input type="text" placeholder="Enter Email" formControlName="email">
+    <br>
+    <br>
+    <input type="text" placeholder="Enter Password" formControlName="password">
+    <br>
+    <br>
+    <button>Login</button>
+    <button type="button" (click)="setValues()">set Values</button>
+</form>
