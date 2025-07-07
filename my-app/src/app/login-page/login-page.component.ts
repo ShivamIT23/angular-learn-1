@@ -18,7 +18,9 @@ export class LoginPageComponent {
 
   formData = new FormGroup({
     name: new FormControl('',[Validators.required,Validators.maxLength(20)]),
-    email: new FormControl('',[Validators.required,Validators.email]),
+    email: new FormControl('',[Validators.required,Validators.maxLength(100),
+      Validators.pattern(`^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$`)
+    ]),
     password: new FormControl('',Validators.minLength(5))
   })
 

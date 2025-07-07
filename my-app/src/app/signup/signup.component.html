@@ -1,1 +1,69 @@
-<p style="font-size: larger; font-weight: 700;">signup super works!</p>
+<h1>signup super works!</h1>
+
+<form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
+  <input
+    #name="ngModel"
+    type="text"
+    placeholder="Enter Name"
+    required
+    name="name"
+    ngModel
+  />
+  <div *ngIf="name?.invalid && name.touched">Name is Required</div>
+  <br />
+  <br />
+  <input
+    minlength="5"
+    #password="ngModel"
+    type="text"
+    placeholder="Enter Password"
+    required
+    name="password"
+    ngModel
+  />
+  <div *ngIf="password.invalid && password.touched">
+    Please enter a valid password
+  </div>
+  <br />
+  <br />
+  <input
+    #email="ngModel"
+    type="email"
+    placeholder="Enter email"
+    email
+    name="email"
+    ngModel
+  />
+  <div *ngIf="email.invalid && email.touched">
+    Please enter a valid email
+  </div>
+  <br />
+  <br />
+  <input
+    #address="ngModel"
+    type="text"
+    placeholder="Enter address"
+    name="address"
+    ngModel
+    pattern="[a-zA-Z0-9\s]+"
+  />
+  <div *ngIf="address.invalid && address.touched">
+    Please enter a valid address
+  </div>
+  <br />
+  <br />
+  <select name="gender" ngModel>
+    <option value="">Select Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <br /><br />
+  <input type="range" min="0" max="40" name="age" ngModel />
+  <br />
+  <button [disabled]="userForm.invalid">Add User</button>
+</form>
+
+<h3>{{ userData?.name }}</h3>
+<h3>{{ userData?.gender }}</h3>
+<h3>{{ userData?.password }}</h3>
+<h3>{{ userData?.age }}</h3>

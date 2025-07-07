@@ -1,4 +1,5 @@
-p{
-    background-color: azure;
-    padding: 10px;
+div{
+    color: red;
+    text-shadow: 3px 3px 4px rgba(255, 0, 0, 0.767);
+    font-size: 20px;
 }

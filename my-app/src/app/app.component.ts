@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 // import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
+import { UserPageComponent } from './user-page/user-page.component';
 // import { SignupComponent } from './signup/signup.component';
 // import { ProfileComponent } from './profile/profile.component';
 
@@ -9,7 +10,8 @@ import { HeaderComponent } from './header/header.component';
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    HeaderComponent
+    UserPageComponent
+    // HeaderComponent
     // LoginComponent,
     // ,SignupComponent
     // ,ProfileComponent
