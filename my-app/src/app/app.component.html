@@ -1,8 +1,27 @@
-
 <!-- <login></login> -->
 
 <!-- <app-header></app-header> -->
 
-<app-user-page [user]="title + name" city="delhi"></app-user-page>
+<!-- <app-user-page [user]="title + name" city="delhi"></app-user-page> -->
+<!-- <app-pipes></app-pipes> -->
 
-<router-outlet />
+<h1>hello</h1>
+
+<!-- <button (click)="updateCounter()">{{ counter }}</button>
+
+@if(counter != 5) {
+<app-lifecycle [counter]="counter" #user ></app-lifecycle>
+} -->
+
+<!-- <router-outlet /> -->
+
+<Button (click)="getProduct()" >Get Data</Button>
+
+@for(product of productData;track product.name){
+    <ul>
+        <li>{{product.name}}</li>
+        <li>{{product.brand}}</li>
+        <li>{{product.price}}</li>
+    </ul>
+    <br>
+}

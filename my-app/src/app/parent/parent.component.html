@@ -1,0 +1,6 @@
+<p>parent works!</p>
+<app-child (getUsers)="handleUsers($event)"></app-child>
+
+@for(user of users; track user){
+    <h3>{{user}}</h3>
+}

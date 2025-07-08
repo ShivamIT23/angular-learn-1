@@ -7,6 +7,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { UserComponent } from './user/user.component';
 import { SignupComponent } from './signup/signup.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 let user = fetch('http://13.233.101.37:8000/profile')
   .then((res) => res.json())
@@ -22,5 +24,7 @@ export const routes: Routes = [
   { path: 'contact', component: ContactUsComponent },
   { path: 'user/:id', component: UserComponent },
   { path: 'profile', component: ProfilePageComponent, data: { user: user } },
+  { path: 'parent', component: ParentComponent },
+  { path: 'child', component: ChildComponent },
   // { path: '**', component: NotFoundComponent }, // This is a universal route So always keep it at last
 ];

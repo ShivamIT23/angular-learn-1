@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   imports: [],
   templateUrl: './child.component.html',
-  styleUrl: './child.component.css'
+  styleUrl: './child.component.css',
 })
 export class ChildComponent {
-  users=["shivam","ashu","krishu"];
+  @Output() getUsers = new EventEmitter();
+  users = ['shivam', 'ashu', 'krishu'];
+
+  // ngOnInit() {
+  //   this.getUsers.emit(this.users);
+  // }
+
+  loadUsers(){
+    this.getUsers.emit(this.users)
+  }
 }
