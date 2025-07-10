@@ -18,6 +18,11 @@ let user = fetch('http://13.233.101.37:8000/profile')
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  {
+    path: 'admin',
+    loadComponent: () =>
+      import('./admin/admin.component').then((c) => c.AdminComponent),
+  },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'signup', component: SignupComponent },

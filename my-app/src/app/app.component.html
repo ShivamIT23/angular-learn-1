@@ -15,7 +15,7 @@
 
 <!-- <router-outlet /> -->
 
-<Button (click)="getProduct()" >Get Data</Button>
+<!-- <Button (click)="getProduct()" >Get Data</Button>
 
 @for(product of productData;track product.name){
     <ul>
@@ -24,4 +24,68 @@
         <li>{{product.price}}</li>
     </ul>
     <br>
-}
+} -->
+
+<!-- @for( product of productList; track product.id){
+    <ul>
+        <li>{{product.id}}</li>
+        <li>{{product.title}}</li>
+        <li>{{product.price}}</li>
+        <li>{{product.rating}}</li>
+        <img src="{{product.thumbnail}}" alt="">
+        <img src="{{product.images[0]}}" alt="">
+    </ul>
+} -->
+
+<!-- <form #userForm="ngForm" (ngSubmit)="addUser(userForm.value)" method="post">
+  <input
+    type="text"
+    name="name"
+    [ngModel]="selectedUser?.name"
+    placeholder="Enter Name"
+    ngModel
+  />
+  <br /><br />
+  <input
+    type="text"
+    name="email"
+    [ngModel]="selectedUser?.email"
+    placeholder="Enter email"
+    ngModel
+  />
+  <br /><br />
+  <input
+    type="number"
+    name="age"
+    [ngModel]="selectedUser?.age"
+    id=""
+    placeholder="Enter Age"
+    ngModel
+  />
+  <br /><br />
+  @if(!selectedUser){
+  <button>Add User</button>
+  }@else{
+  <button>Update User</button>
+  }
+</form>
+
+@for( user of users; track user.id){
+<ul>
+  <li>{{ user.id }}</li>
+  <li>{{ user.name }}</li>
+  <li>{{ user.age }}</li>
+  <li>{{ user.email }}</li>
+  <li>
+    <button (click)="deleteUser(user.id)">Delete</button>
+    <button style="margin-left: 5px" (click)="selectUser(user.id)">
+      Update
+    </button>
+  </li>
+</ul>
+} -->
+
+
+<a routerLink="/admin">Go to Admin Page</a>
+
+<router-outlet></router-outlet>
